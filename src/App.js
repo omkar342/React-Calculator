@@ -1,25 +1,23 @@
-import React , {useState} from 'react';
-import Keypad from './Keypad';
-import './App.css';
+import React, { useState } from "react";
+
+import "./App.css";
+import Keypad from "./Keypad";
 
 function App() {
+  const [result, setResult] = useState("");
 
-  const [result , setResult] = useState("");
+  // This funtion handles input change events
+  const handleInputChange = (event) => setResult(event.target.value);
 
-  const handleInputChange = (event) => {
-    setResult(event.target.value);
-  }
-
-  const changeInput = (clickedButton) => {
-    setResult(clickedButton);
-  }
+  // This function handles keypad button clicks
+  const changeInput = (clickedButton) => setResult(clickedButton);
 
   return (
     <div className="container">
-     <form action="">
+      <form action="">
         <input onChange={handleInputChange} value={result || 0} type="text" />
-     </form> 
-     <Keypad changeMyInput={changeInput} />
+      </form>
+      <Keypad changeMyInput={changeInput} />
     </div>
   );
 }
