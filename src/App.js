@@ -1,4 +1,9 @@
-import React, { useState } from "react";
+
+import React , {useState} from 'react';
+import Footer from './Footer';
+import Keypad from './Keypad';
+import './App.css';
+
 
 import "./App.css";
 import Keypad from "./Keypad";
@@ -13,11 +18,14 @@ function App() {
   const changeInput = (clickedButton) => setResult(clickedButton);
 
   return (
-    <div className="container">
-      <form action="">
+    <div>
+      <div className="container">
+     <form action="">
         <input onChange={handleInputChange} value={result || 0} type="text" />
       </form>
       <Keypad changeMyInput={changeInput} />
+    </div>
+    <Footer/>
     </div>
   );
 }

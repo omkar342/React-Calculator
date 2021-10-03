@@ -1,0 +1,24 @@
+.footer{
+    background-color: #0e7bc9;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer a {
+    color: #ff6600;
+}
+
+.footer a:hover {
+    color: #db5800;
+}
+
+/* .center{
+    transform: translateY(-50%);
+} */
