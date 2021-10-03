@@ -1,4 +1,5 @@
 import React , {useState} from 'react';
+import Footer from './Footer';
 import Keypad from './Keypad';
 import './App.css';
 
@@ -15,11 +16,14 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div>
+      <div className="container">
      <form action="">
         <input onChange={handleInputChange} value={result || 0} type="text" />
      </form> 
      <Keypad changeMyInput={changeInput} />
+    </div>
+    <Footer/>
     </div>
   );
 }
